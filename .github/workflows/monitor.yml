@@ -2,13 +2,14 @@ name: Ticket Monitor
 
 on:
   schedule:
-    - cron: "* * * * *"
-
+    - cron: "*/5 * * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   monitor:
-
     runs-on: ubuntu-latest
 
     steps:
